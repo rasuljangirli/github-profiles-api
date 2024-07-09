@@ -7,16 +7,13 @@ form.addEventListener("submit", (e) => {
     check();
 })
 
-
 async function getInfo() {
     try {
         let user = input.value;
         const resp = await fetch(`https://api.github.com/users/${user}`);
         const respData = await resp.json();
-
         writeUİ(respData);
         getRepos(user)
-
     } catch (error) {
         alert(error);
     }
