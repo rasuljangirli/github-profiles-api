@@ -52,7 +52,7 @@ async function writeUİ(data) {
 
 function addReposToCard(repos) {
     const reposE1 = document.querySelector(".main");
-
+    
     repos
         .sort((a, b) => b.stargazers_count - a.stargazers_count)
         .slice(0, 5).forEach((element) => {
